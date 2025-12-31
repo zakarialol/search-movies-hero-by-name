@@ -1,0 +1,185 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --background-color:#c13434;
+    --first-color:black;
+    --third-color:#574340;
+    --second-color:#939191;
+    --white-color:white;
+    --padding-medium:10px;
+    --br-radius-small:5px;
+    --inputs-heigh:35px;
+    --fs-large:20px;
+    --margin-top:20px
+
+}
+body{
+    background: var(--background-color);
+    height: 100vh;
+    height: 100dvh;
+    align-content: center;
+}
+.contentHolder{
+    color: white;
+    margin-top: var(--margin-top);
+}
+main{
+    background: var(--first-color);
+    padding: var(--padding-medium);
+    border-radius: var(--br-radius-small);
+    width: fit-content;
+    margin: 0 auto;
+    width: 400px;
+}
+.text-input{
+    background: var(--second-color);
+    color: var(--white-color);
+    min-height: var(--inputs-heigh);
+    border-radius: var(--br-radius-small);
+    outline: none;
+    padding-left: 5px;
+    width: 100%;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+button[type='submit']{
+    height: var(--inputs-heigh);
+    width: 115px;
+    background: var(--background-color);
+    color: white;
+    border: none;
+    border-radius: var(--br-radius-small);
+}
+.info-hero{
+    color: white;
+}
+.inputDiv{
+    position: relative;
+    flex: 1;
+}
+.listHolder{
+    background:var(--third-color);
+    border-radius: var(--br-radius-small);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    right: 0;
+    overflow: auto;
+    color: white;
+    max-height: 200px;
+}
+.listHolder p{
+    padding: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+.listHolder p:hover{
+    background-color: var(--first-color);
+}
+.hidden{
+    display: none;
+}
+.hero-info{
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    padding-bottom: var(--padding-medium);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+input::placeholder{
+    color: white;
+}
+.containerForImg{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.closeBtnDiv{
+    display: flex;
+    justify-content: end;
+}
+.imgHolder{
+    width: 70px;
+    height: 70px;
+    border: solid 3px white;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.imgHolder img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.heroName{
+    font-size: var(--fs-large);
+    font-weight: bold;
+}
+.heroInfo{
+    font-size: 12px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+.closeBtnDiv{
+    display: flex;
+    justify-content: end;
+}
+.closeBtnDiv button{
+    background: none;
+    border: solid 2px white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.closeBtnDiv button:hover{
+    background-color: var(--background-color);
+    border-color: var(--background-color);
+}
+.heroesDiv{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+.hero-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.heroFaceImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: solid;
+    overflow: hidden;
+}
+.heroFaceImg img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.errorHolder{
+    color: #cf5555;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
