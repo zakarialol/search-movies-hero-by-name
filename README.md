@@ -27,7 +27,7 @@ This project was built to practice JavaScript fundamentals such as functions, ar
 ## 📸 Screenshots
 
 ### Home Page
-![t](screenshots/home.png)
+![project home](Capture1.PNG)
 
 ### Search Result
 ![Search Screenshot](screenshots/result.png)
