@@ -25,14 +25,48 @@ body{
 .contentHolder{
     color: white;
     margin-top: var(--margin-top);
+    max-height: 500px;
+    overflow: auto;
 }
 main{
+    position: relative;
     background: var(--first-color);
     padding: var(--padding-medium);
     border-radius: var(--br-radius-small);
     width: fit-content;
     margin: 0 auto;
     width: 400px;
+}
+.leaderAnimation{
+position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    color: white;
+    font-size: 30px;
+    text-transform: capitalize;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    align-content: center;
+    pointer-events: none;
+}
+.loadingText{
+    animation: loadAnimation 2s linear infinite;
+}
+@keyframes loadAnimation {
+    0%{
+       opacity: 0.4;
+       transform: scale(0.9);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0.4;
+        transform: scale(0.9);
+    }
 }
 .text-input{
     background: var(--second-color);
@@ -84,7 +118,7 @@ button[type='submit']{
     background-color: var(--first-color);
 }
 .hidden{
-    display: none;
+    display: none !important;
 }
 .hero-info{
     color: white;
@@ -134,7 +168,7 @@ input::placeholder{
     display: flex;
     justify-content: end;
 }
-.closeBtnDiv button{
+.closeBtnn{
     background: none;
     border: solid 2px white;
     border-radius: 50%;
@@ -182,4 +216,40 @@ input::placeholder{
     margin-bottom: 8px;
     letter-spacing: 1px;
 }
-
+.displayGrid{
+    display: grid !important;
+}
+/* skeleteon styles */
+.skeleton-btn ,.skeleton-img{
+    background: #e0e0e0;
+}
+.skeleton-line.title{
+    width: 80px;
+}
+.skeleton-line.short{
+    width: 70%;
+}
+.skeleton-line{
+    width: 100%;
+    background: #e0e0e0;
+    height: 1em;
+    margin-bottom: 5px;
+}
+.skeleton-line,.skeleton-btn,.skeleton-img{
+    animation: opacityAnimation 2s linear infinite;
+}
+.heroesDiv.animation{
+     max-height: 500px;
+    overflow: auto;
+}
+/* animation */
+@keyframes opacityAnimation {
+    0%{
+        opacity: .5;
+    } 50%{
+        opacity: .1;
+    } 100%{
+        opacity: .5;
+    }
+}
+/* media queries  */
